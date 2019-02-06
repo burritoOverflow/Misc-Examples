@@ -14,14 +14,14 @@ def isPrime(value):
                 prime = False
         return prime
 
-def reverse(value):        # just testing Python's string functions
+def reverse(value):        
     value = str(value)
-    return int(value[::-1])     # use string slicing; return the value as an integer
+    return int(value[::-1])     
 
 # find N emirps
 def findNEmirps(value):
-    value = int(value)      # value needs to be an integer
-    nEmirps = 0             # counter for the N of primes
+    value = int(value)      
+    nEmirps = 0             
     potentialVal = 2        # by definition primes are >= 2
     printCount = 1
     while nEmirps < value:
@@ -44,11 +44,11 @@ def main():
         try:
             posVal = int(value)
             if posVal < 0:
-                print("Value is not positive; please enter a positive value: ")         # for non-positive integer values
+                print("Value is not positive; please enter a positive value: ")         
                 continue
             break
         except ValueError:
-            print("Value entered is not an integer!")       # for non-integer values
+            print("Value entered is not an integer!")       
     findNEmirps(value)
 
 
