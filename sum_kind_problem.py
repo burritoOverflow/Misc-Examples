@@ -1,4 +1,4 @@
-# sum of n positive numbers n(n + 1)/2
+# solution to open.kattis sum kind of problem
 
 p = int(input())
 
