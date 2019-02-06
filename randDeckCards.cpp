@@ -1,5 +1,3 @@
-// Simple representation of a deck of cards, a random shuffle of the deck, followed by drawing two random cards.
-
 #include <map>
 #include <string>
 #include <vector>
@@ -65,16 +63,12 @@ std::pair<std::pair<int, std::string>, std::pair<int, std::string>> draw_two_car
   srand(time(NULL));
 
   int rand1, rand2;
-  rand1 = rand() % 52 - 1;
-  rand2 = rand() % 52 - 1;
-
-  // this needs to be performed better, but a stupid dup check
-  // also doesnt take into account this occuring twice. This is a temporary band-aid.
-  if (rand1 == rand2)
-  {
-    printf("Wow, they we're actually the same! We're not supposed to be here!\n");
+  // to avoid duplicate random numbers
+  do {
+    rand1 = rand() % 52 - 1;
     rand2 = rand() % 52 - 1;
-  }
+  } while(rand1 == rand2);
+
 
   // return a pair of the two cards corresponding to the indicies found
   return std::make_pair(vec_deck[rand1], vec_deck[rand2]);
@@ -96,7 +90,6 @@ int main()
 {
 
   std::vector<std::pair<int,std::string> > deck;
-  // now we've got the hearts taken care of
   make_full_deck(deck);
 
   std::pair<std::pair<int, std::string>, std::pair<int, std::string>> rand_cards;
