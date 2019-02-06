@@ -1,3 +1,5 @@
+// Simple representation of a deck of cards, a random shuffle of the deck, followed by drawing two random cards.
+
 #include <map>
 #include <string>
 #include <vector>
