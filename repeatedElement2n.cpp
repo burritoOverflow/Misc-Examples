@@ -33,7 +33,7 @@ public:
   }
 };
 
-
+// solution using provided test case
 int main()
 {
   Solution s;
