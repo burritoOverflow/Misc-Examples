@@ -44,7 +44,7 @@ int main(int argc, char const *argv[])
   std::cout << "Result after logical AND: " << (int)val3 << " (base10) "
             << std::bitset<8>(val3) << " (base2).\n";
 
-  // logical OR 00001010 & 00100010 = 00101010
+  // logical OR 00001010 | 00100010 = 00101010
   uint8_t val4 = val1 | val2;
 
   std::cout << "Result after logical OR: " << (int)val4 << " (base10) "
