@@ -1,6 +1,4 @@
-// do we need a single semaphore that counts values (increments/decrements
-// accordingly),
-// or a condition variable for each thread??? see P&C in book
+// producer-consumer example using a monitor.
 
 // g++ -pthread -fsanitize=thread -g SafeQueueAssignment.cpp
 
