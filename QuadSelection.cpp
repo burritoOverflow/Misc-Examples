@@ -12,7 +12,6 @@ int determineQuadrant(int x, int y)
 	typedef std::pair<bool, bool> boolPair;
 	std::map<boolPair, int> quadMap;
 
-
 	boolPair p1 = std::make_pair(false, false);
 	boolPair p2 = std::make_pair(true, false);
 	boolPair p3 = std::make_pair(true, true);
@@ -27,8 +26,7 @@ int determineQuadrant(int x, int y)
 
 	boolPair quadrant = std::make_pair(std::signbit(x), std::signbit(y));
 
-	return quadMap.find(quadrant)->second;
-	
+	return quadMap.find(quadrant)->second;	
 }
 
 
