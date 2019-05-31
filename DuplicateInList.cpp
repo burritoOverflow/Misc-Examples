@@ -2,6 +2,7 @@
 #include <iostream>
 #include <assert.h>
 
+// find duplicate elements in a list
 int Duplicate(int arr[], int size)
 {
   std::set<int> myset;
