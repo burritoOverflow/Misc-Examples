@@ -23,8 +23,6 @@ int determineQuadrant(int x, int y)
 	boolPair p3 = std::make_pair(true, true);
 	boolPair p4 = std::make_pair(false, true);
 
-	std::map<boolPair,int>::iterator it = quadMap.begin();
-
 	quadMap[p1] = 1;
 	quadMap[p2] = 2;
 	quadMap[p3] = 3;
