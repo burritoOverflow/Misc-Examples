@@ -30,9 +30,7 @@ int determineQuadrant(int x, int y)
 	quadMap[p3] = 3;
 	quadMap[p4] = 4;
 
-	boolPair quadrant = std::make_pair(std::signbit(x), std::signbit(y));
-
-	return quadMap.find(quadrant)->second;	
+	return quadMap.find(std::make_pair(std::signbit(x), std::signbit(y)))->second;	
 }
 
 
