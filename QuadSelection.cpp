@@ -11,7 +11,13 @@ int determineQuadrant(int x, int y)
 {
 	typedef std::pair<bool, bool> boolPair;
 	std::map<boolPair, int> quadMap;
-
+	
+	/* 
+	  make pairs for the result of the signbit function for each quadrant--these are the map's keys.
+	  The values associated with the keys are the corresponding quadrant.
+	  If a value is positive, the signbit function returns false (0); it returns true (1) if the value is negative.
+	*/
+	
 	boolPair p1 = std::make_pair(false, false);
 	boolPair p2 = std::make_pair(true, false);
 	boolPair p3 = std::make_pair(true, true);
