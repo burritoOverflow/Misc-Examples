@@ -1,5 +1,7 @@
 #include <iostream>
 
+// used to determine how the arrays are sorted by examining the relationship between the first two values.
+
 bool sortedAscending(int array[], int size)
 {
   for(int i = 0; i < size; i++)
