@@ -3,19 +3,25 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 
 <script type="text/javascript">
-  // this is useless at the moment--add code to append dropdowns, perhaps?
   window.onload = function() {
     var navbar = document.getElementsByClassName("navbar");
- 
+    // add code to append dropdowns, perhaps?
   }
   
 </script>
 
 <style>
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Oswald', sans-serif;
+}
+
+#grad1 {
+  height: 100%;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #A67B5B, #FFD700); /* Standard syntax (must be last) */
 }
 
 .paragraphtext {
@@ -45,8 +51,8 @@ body {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: white;
-  padding: 14px 16px;
+  color: black;
+  padding: 12px 14px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -84,7 +90,7 @@ body {
 </style>
 </head>
 <body>
-<div class="navbar">
+<div class="navbar" id="grad1">
   <div class="dropdown">
     <button class="dropbtn">Stuff 1 
       <i class="fa fa-hand-o-down"></i>
