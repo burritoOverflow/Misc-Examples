@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript">
+  window.onload = function() {
+    var navbar = document.getElementsByClassName("navbar");
+    // add code to append dropdowns, perhaps?
+  }
+  
+</script>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.paragraphtext {
+  text-align: center;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: brown;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Stuff 1 
+      <i class="fa fa-hand-o-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+    <div class="dropdown">
+    <button class="dropbtn">Stuff 2 
+      <i class="fa fa-hand-o-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+    <div class="dropdown">
+    <button class="dropbtn">Stuff 3 
+      <i class="fa fa-hand-o-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+</div>
+<div class="paragraphtext">
+  <h3>Various Links</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod lacinia at quis risus sed. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Auctor augue mauris augue neque gravida in. Accumsan tortor posuere ac ut consequat semper viverra. Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Lobortis elementum nibh tellus molestie nunc. Vel risus commodo viverra maecenas accumsan lacus. Sodales ut etiam sit amet nisl purus. Felis eget velit aliquet sagittis id consectetur purus ut faucibus.</p>
+</div>
+</body>
+</html>
