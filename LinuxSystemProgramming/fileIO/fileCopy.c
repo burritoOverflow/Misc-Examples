@@ -1,7 +1,4 @@
-/* 
-  trivial file copy program to demonstrate low-level IO 
-*/
-
+/* trivial file copy program to demonstrate low-level IO */
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
@@ -22,7 +19,7 @@ int main()
 		exit(1);
 	}
 
-	if ((fout = open("bar.txt", O_WRONLY)) < 0) {
+	if ((fout = open("bar.txt", O_WRONLY | O_CREAT, 0644)) < 0) {
 		perror("bar.txt");
 		exit(2);
 	}
