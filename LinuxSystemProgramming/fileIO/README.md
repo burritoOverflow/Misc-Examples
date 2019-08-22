@@ -14,3 +14,5 @@ $ gcc -o bufIO bufIO.c
 $ time ./bufIO 1 1000000
 $ ./bufIO 1 1000000  0.08s user 0.01s system 90% cpu 0.102 total
 ```
+
+Granted, this is a contrived example, but demonstrates the overhead involved in system calls.
