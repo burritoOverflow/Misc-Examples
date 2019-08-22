@@ -18,3 +18,5 @@ Traceback (most recent call last):
     fout = os.open('foo.txt', os.O_WRONLY | os.O_CREAT, 0o644)
 PermissionError: [Errno 13] Permission denied: 'foo.txt'
 ```
+
+Note how the python api for write call closely resembles the c system call. 
