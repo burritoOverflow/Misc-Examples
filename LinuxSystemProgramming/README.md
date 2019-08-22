@@ -1,7 +1,9 @@
 Run either file to write 'hello world' to the file.
-Next, remove write permissions from the file; run the script and executable again
+Next, remove write permissions from the file; run the script/executable again. Note the error.
 
 ```
+$ gcc -o WriteFile simpleFileWrite.c
+$ ./WriteFile
 $ chmod 400 foo.txt
 $ ./WriteFile
 Error number: 13
