@@ -12,6 +12,9 @@ module.exports = {
   //create a server object, take content as arg,
   // return as response
   server: function(content, port) {
+    if(port === undefined || content === undefined) {
+      throw new Error("Server requires both a port and content to serve");
+    }
     http.createServer(function (req, res) {
       res.write(content);
       res.end();
