@@ -1,5 +1,6 @@
 '''
 	Given a list of intervals, find start times that are independent (not within another interval)
+	Returns the number of start times that meet this condition, along with a list of those times
 '''
 
 def find_non_overlap_start(interval_list):
