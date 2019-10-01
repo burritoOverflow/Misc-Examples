@@ -31,14 +31,20 @@ int main(int argc, char const *argv[])
 	// lines desired.
 	if((lseek(fd, -BUFFSIZE * numLinesDesired, SEEK_END)) == -1) 
 	{
-		perror("Seek");
-		exit(EXIT_FAILURE);
+		// file is too small, let's just move to the beginning.
+		if((lseek(fd, 0, SEEK_SET)) == -1)
+		{
+			perror("Seek failed.");
+			exit(EXIT_FAILURE);
+		}
 	}
 
 	numLinesRead = 0;
 	totalBytesRead = 0;
 	// if the buffer is no longer able to be 'filled', we've 
-	// probably run out of 'lines'
+	// probably run out of 'lines'--this check is only
+	// necessary for 'small' files, those where the initial
+	// seek to backtrack from EOF failed.
 	while((numBytesRead = read(fd, &buf, BUFFSIZE)) == BUFFSIZE)
 	{
 		// keep track of both the number of 'lines'
