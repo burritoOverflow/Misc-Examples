@@ -1,7 +1,7 @@
 const assert = require('assert');
 
 recursiveLinearSearch = (arr, n, val) => {
-  if (n <= 0) {
+  if (n < 0) {
     // value not found
     return false
   }
