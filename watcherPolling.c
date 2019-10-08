@@ -29,7 +29,7 @@ int main(int argc, const char *argv[])
     }
     else
     {
-      perror("stat failed first");
+      perror("stat failed");
       exit(EXIT_FAILURE);
     }
   }
@@ -55,7 +55,7 @@ int main(int argc, const char *argv[])
       }
       else
       {
-        perror("stat failed later");
+        perror("stat failed");
         exit(EXIT_FAILURE);
       }
 
