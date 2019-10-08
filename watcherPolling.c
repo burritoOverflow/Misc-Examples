@@ -8,17 +8,18 @@
 int main(int argc, const char *argv[])
 {
 
+  if (argc < 2 || argc > 11)
+  {
+    printf("Usage: %s and up to ten filenames as args", argv[0]);
+    exit(EXIT_FAILURE);
+  }
+
   int numFiles = argc - 1;
 
   time_t lastAccessedArr[numFiles];
   time_t lastModifiedArr[numFiles];
 
   struct stat statStruct;
-
-  if (argc < 2 || argc > 11) {
-    printf("Usage: %s and up to ten filenames as args", argv[0]);
-    exit(EXIT_FAILURE);
-  }
 
   // set the initial values for each file in the arrays
   for (int i = 0; i < numFiles; i++)
