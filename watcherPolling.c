@@ -1,4 +1,5 @@
 #include <time.h>
+#include <stdbool.h>
 #include <sys/stat.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -38,18 +39,24 @@ int main(int argc, const char *argv[])
   {
     for (int i = 0; i < numFiles; i++)
     {
+      bool modified = false;
+
       if (stat(argv[i + 1], &statStruct) != -1)
       {
         if (statStruct.st_mtime != lastModifiedArr[i])
         {
-          printf("Last modified time: %s", ctime(&statStruct.st_mtime));
+          printf("Last modified: %s", ctime(&statStruct.st_mtime));
           // time modified, update the value at the corresponding index
           lastModifiedArr[i] = statStruct.st_mtime;
+          modified = true;
         }
 
-        if (statStruct.st_mtime == lastModifiedArr[i] && statStruct.st_atime != lastAccessedArr[i])
+        if (statStruct.st_atime != lastAccessedArr[i])
         {
-          printf("Last accessed: %s", ctime(&statStruct.st_atime));
+          if (!modified)
+          {
+            printf("Last accessed: %s", ctime(&statStruct.st_atime));
+          }
           lastAccessedArr[i] = statStruct.st_atime;
         }
       }
@@ -60,7 +67,7 @@ int main(int argc, const char *argv[])
       }
 
     }
-    sleep(1);
+    // sleep(1);
   }
 
 }
