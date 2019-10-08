@@ -1,0 +1,69 @@
+#header {
+  background-color: #8B0000;
+  color: white;
+  text-align: right;
+  font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 60px;
+}
+
+#left {
+  background: azure;
+  float: left;
+  border: 1px solid lightgray;
+  width: 12.5%;
+  padding-left: 10px;
+}
+
+#main {
+  display: inline-block;
+  width: 70%;
+  padding-left: 10px;
+}
+
+#right {
+  background: #FFFFE0;
+  float: right;
+  width: 12.5%;
+}
+
+#right h3 {
+  padding-left: 5px;
+}
+
+#right p {
+  padding: 10px;
+}
+
+#speech-header {
+  margin-top: 0;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+#p-two {
+  font-size: x-large;
+}
+
+.other-content {
+  font-size: large;
+}
+
+.gettysburg-caption {
+  color: blue;
+}
+
+#footnotes {
+  font-style: italic;
+}
+
+img {
+  width: 75%;
+  height: auto;
+}
+
+ul {
+  list-style-type: circle;
+  padding-left: 75px;
+}
