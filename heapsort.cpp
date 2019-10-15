@@ -61,6 +61,20 @@ void printArray(int A[], int n)
   std::cout << std::endl;
 }
 
+void testSort(int A[], int size)
+{
+  int k = -1;
+  for(int i = 0; i < size; i++)
+  {
+    if (k > 0)
+    {
+      assert(A[i] >= k);
+
+    }
+    k = A[i];
+  }
+}
+
 int main()
 {
 
@@ -77,5 +91,7 @@ int main()
   heapsort(arr, 1000000);
   std::cout << "Time to sort 1000000 integers: " <<
       (std::clock() - start) / (double)(CLOCKS_PER_SEC / 1000) << " ms" << std::endl;
+
+  testSort(arr, sizeof(arr)/sizeof(arr[0]));
 
 }
