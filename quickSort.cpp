@@ -1,3 +1,4 @@
+#include <assert.h>
 #include <iostream>
 #include <ctime>
 
@@ -44,12 +45,28 @@ void printArr(int A[], int size)
 	std::cout << std::endl;
 }
 
+void testSort(int A[], int size)
+{
+	int k = -1;
+	for(int i = 0; i < size; i++)
+	{
+		if (k > 0)
+		{
+			assert(A[i] >= k);
+
+		}
+		k = A[i];
+	}
+}
+
 int main()
 {
 
 	std::clock_t start;
 	srand(time(NULL));
 	int arr[1000000];
+
+	int arrSize = sizeof(arr)/sizeof(arr[0]);
 
 	// populate array with 1000000 random values 
 	// between 1 and 1000
@@ -59,9 +76,11 @@ int main()
 	}
 
 	start = std::clock();
-	quickSort(arr, 0, sizeof(arr)/sizeof(arr[0]) - 1);
+	quickSort(arr, 0, arrSize - 1);
 
 	std::cout << "Time to sort 1000000 integers: " <<
 	  (std::clock() - start) / (double)(CLOCKS_PER_SEC / 1000) << " ms" << std::endl;
+
+	testSort(arr, arrSize);
 
 }
