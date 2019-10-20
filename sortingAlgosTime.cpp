@@ -214,7 +214,7 @@ int main()
 	start = std::clock();
 	mergeSort(arr, 0, arrSize - 1, auxArr);
 
-	std::cout << "Time to sort 1000000 integers using merge sort: " <<
+	std::cout << "Time to sort " << arrSize << " integers using merge sort: " <<
 	  (std::clock() - start) / (double)(CLOCKS_PER_SEC / 1000) << " ms" << std::endl;
 
 	// verify that the array was sorted
@@ -227,7 +227,7 @@ int main()
 	// section heapsort
 	start = std::clock();
 	heapsort(arr, 1000000);
-	std::cout << "Time to sort 1000000 integers using heap sort: " <<
+	std::cout << "Time to sort " << arrSize << " integers using heap sort: " <<
 	  (std::clock() - start) / (double)(CLOCKS_PER_SEC / 1000) << " ms" << std::endl;
 
 	testSort(arr, sizeof(arr)/sizeof(arr[0]));
@@ -240,11 +240,10 @@ int main()
 	start = std::clock();
 	quickSort(arr, 0, arrSize - 1);
 
-	std::cout << "Time to sort 1000000 integers using quicksort: " <<
+	std::cout << "Time to sort " << arrSize << " integers using quicksort: " <<
 	  (std::clock() - start) / (double)(CLOCKS_PER_SEC / 1000) << " ms" << std::endl;
 
 	testSort(arr, arrSize);
 	// end quicksort
 
 }
-
