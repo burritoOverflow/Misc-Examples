@@ -188,7 +188,7 @@ void quickSort(int A[], int p, int r)
 // 1 and 1000
 void populateArrRandom(int A[], int size)
 {
-	for (int i = 0; i < 1000000; i++)
+	for (int i = 0; i < size; i++)
 	{
 		A[i] = rand() % 1000 + 1;
 	}
