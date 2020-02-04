@@ -19,12 +19,12 @@ public:
     }
 
     // accessor functions
-    int getX()
+    int getX() const
     {
         return this->x;
     }
 
-    int getY()
+    int getY() const
     {
         return this->y;
     }
@@ -77,7 +77,7 @@ public:
     }
 };
 
-double distanceBetweenTwoPoints(Point p1, Point p2)
+double distanceBetweenTwoPoints(const Point p1, const Point p2)
 {
     double xDistance = pow(p1.getX() - p2.getX(), 2);
     double yDistance = pow(p1.getY() - p2.getY(), 2);
