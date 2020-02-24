@@ -1,12 +1,10 @@
 #!/bin/bash
-
-if [ $# -eq 0 ]
+if [[ $# -ne 2 ]]
   then
     echo "Usage: ./mirrorSite.sh <url> <bucket-name>"
     exit 1
 fi
 
-# change user-agent as one sees fit
 wget -e robots=off --mirror --user-agent="Mozilla/4.0 (compatible; MSIE 7.0b; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.40607)"  \
 --convert-links --adjust-extension --page-requisites --no-parent $1
 
